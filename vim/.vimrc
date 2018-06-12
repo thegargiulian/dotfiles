@@ -14,6 +14,9 @@ highlight LineNr ctermfg=grey
 " sets tabs to 4 spaces
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 
+" sets parenthetical highlighting to just bold
+hi MatchParen cterm=bold ctermbg=Gray ctermfg=none
+
 " sets noexpandtab for Makefiles
 if &ft == 'make'
     setlocal noexpandtab
