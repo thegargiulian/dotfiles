@@ -1,5 +1,4 @@
-" Vi IMproved
-set nocompatible
+" Vi IMproved set nocompatible
 
 " Backspace 
 set backspace=indent,eol,start 
