@@ -76,3 +76,4 @@ alias gA="git add -A && git status"
 
 # creates j
 alias j='xdir=$(fasd -dl | fzf --tac) && cd "$xdir"'
+eval "$(fasd --init auto)"
