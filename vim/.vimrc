@@ -1,4 +1,12 @@
-" Vi IMproved set nocompatible
+" Vi IMproved 
+set nocompatible
+
+" Plugins
+call plug#begin("~/dotfiles/vim/plugged")
+
+Plug 'justinmk/vim-sneak'
+
+call plug#end()
 
 " Backspace 
 set backspace=indent,eol,start 
