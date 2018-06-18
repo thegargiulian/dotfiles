@@ -8,6 +8,14 @@ Plug 'justinmk/vim-sneak'
 
 call plug#end()
 
+" plug config
+
+" sneak config
+let g:sneak#label = 1
+let g:sneak#streak = 1
+nmap s <Plug>SneakLabel_s
+nmap S <Plug>SneakLabel_S
+
 " Backspace 
 set backspace=indent,eol,start 
 
