@@ -27,7 +27,6 @@ let g:ale_linters = {
 " light-line config
 set laststatus=2
 let g:lightline = {
-      \ 'colorscheme': 'solarized dark',
       \ }
 
 " save on escape
