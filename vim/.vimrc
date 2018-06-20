@@ -6,6 +6,7 @@ call plug#begin("~/dotfiles/vim/plugged")
 
 Plug 'justinmk/vim-sneak'
 Plug 'w0rp/ale'
+Plug 'itchyny/lightline.vim'
 
 call plug#end()
 
@@ -23,6 +24,11 @@ let g:ale_linters = {
 \   'R': ['lintr']
 \}
 
+" light-line config
+set laststatus=2
+let g:lightline = {
+      \ 'colorscheme': 'solarized dark',
+      \ }
 " Backspace 
 set backspace=indent,eol,start 
 
