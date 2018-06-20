@@ -27,8 +27,12 @@ let g:ale_linters = {
 " light-line config
 set laststatus=2
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'solarized dark',
       \ }
+
+" save on escape
+inoremap <Esc> <Esc>:w<CR>
+
 " Backspace 
 set backspace=indent,eol,start 
 
