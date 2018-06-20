@@ -5,6 +5,7 @@ set nocompatible
 call plug#begin("~/dotfiles/vim/plugged")
 
 Plug 'justinmk/vim-sneak'
+Plug 'w0rp/ale'
 
 call plug#end()
 
@@ -15,6 +16,12 @@ let g:sneak#label = 1
 let g:sneak#streak = 1
 nmap s <Plug>SneakLabel_s
 nmap S <Plug>SneakLabel_S
+
+" ale config
+let g:ale_linters = {
+\   'python': ['flake8'],
+\   'R': ['lintr']
+\}
 
 " Backspace 
 set backspace=indent,eol,start 
