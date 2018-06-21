@@ -29,6 +29,12 @@ set laststatus=2
 let g:lightline = {
       \ }
 
+" disable arrow keys
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
 " save on escape
 inoremap <Esc> <Esc>:w<CR>
 
