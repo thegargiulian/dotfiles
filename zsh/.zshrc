@@ -74,6 +74,9 @@ alias gc="git commit -m"
 # makes gA git add
 alias gA="git add -A && git status"
 
+# makes rcr run clean && run
+alias rcr="run clean && run"
+
 # creates j
 alias j='xdir=$(fasd -dl | fzf --tac) && cd "$xdir"'
 eval "$(fasd --init auto)"
