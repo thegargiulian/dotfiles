@@ -7,6 +7,9 @@ call plug#begin("~/dotfiles/vim/plugged")
 Plug 'justinmk/vim-sneak'
 Plug 'w0rp/ale'
 Plug 'itchyny/lightline.vim'
+Plug 'roxma/nvim-completion-manager'
+Plug 'jalvesaq/Nvim-R'
+Plug 'gaalcaras/ncm-R'
 
 call plug#end()
 
@@ -38,8 +41,12 @@ noremap <Right> <NOP>
 " save on escape
 inoremap <Esc> <Esc>:w<CR>
 
-" Backspace 
+" backspace 
 set backspace=indent,eol,start 
+
+" setting up completion
+let g:cm_smart_enable = 1
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 
 " sets up syntax highlighting
 syntax enable
