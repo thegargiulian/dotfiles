@@ -70,3 +70,7 @@ endif
 " color columns beyond 80 characters
 set colorcolumn=80
 highlight ColorColumn ctermbg=red guibg=red
+
+function zhead () {
+    zcat $1 | head
+}
