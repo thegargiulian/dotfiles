@@ -80,3 +80,8 @@ alias rcr="run clean && run"
 # creates j
 alias j='xdir=$(fasd -dl | fzf --tac) && cd "$xdir"'
 eval "$(fasd --init auto)"
+
+# zhead
+function zhead () {
+    zcat $1 | head
+}
