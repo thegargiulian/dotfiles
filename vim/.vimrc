@@ -7,9 +7,9 @@ call plug#begin("~/dotfiles/vim/plugged")
 Plug 'justinmk/vim-sneak'
 Plug 'w0rp/ale'
 Plug 'itchyny/lightline.vim'
-Plug 'roxma/nvim-completion-manager'
-Plug 'jalvesaq/Nvim-R'
-Plug 'gaalcaras/ncm-R'
+"Plug 'roxma/nvim-completion-manager'
+"Plug 'jalvesaq/Nvim-R'
+"Plug 'gaalcaras/ncm-R'
 
 call plug#end()
 
@@ -45,8 +45,8 @@ inoremap <Esc> <Esc>:w<CR>
 set backspace=indent,eol,start 
 
 " setting up completion
-let g:cm_smart_enable = 1
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+"let g:cm_smart_enable = 1
+"inoremap <expr> <Tab> pumvisible() ? \"\<C-n>" : \"\<Tab>"
 
 " sets up syntax highlighting
 syntax enable
@@ -59,7 +59,7 @@ highlight LineNr ctermfg=grey
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 " sets parenthetical highlighting to just bold
-hi MatchParen cterm=bold ctermbg=Gray ctermfg=none
+hi MatchParen cterm=bold ctermbg=Black ctermfg=none
 
 " sets noexpandtab for Makefiles
 if &ft == 'make'
