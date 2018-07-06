@@ -78,7 +78,7 @@ alias gA="git add -A && git status"
 alias rcr="run clean && run"
 
 # ll
-alias ll="ls -lh --color='always'"
+alias ll="ls -AlFGgh --color='always'"
 
 # creates j
 alias j='xdir=$(fasd -dl | fzf --tac) && cd "$xdir"'
