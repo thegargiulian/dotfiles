@@ -7,6 +7,7 @@ call plug#begin("~/dotfiles/vim/plugged")
 Plug 'justinmk/vim-sneak'
 Plug 'w0rp/ale'
 Plug 'itchyny/lightline.vim'
+Plug 'SirVer/ultisnips'
 "Plug 'roxma/nvim-completion-manager'
 "Plug 'jalvesaq/Nvim-R'
 "Plug 'gaalcaras/ncm-R'
@@ -31,6 +32,12 @@ let g:ale_linters = {
 set laststatus=2
 let g:lightline = {
       \ }
+
+" ultisnips
+let g:UltiSnipsUsePythonVersion = 3
+let g:UltiSnipsExpandTrigger = '<C-j>'
+let g:UltiSnipsJumpForwardTrigger = '<C-j>'
+let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
 
 " disable arrow keys
 noremap <Up> <NOP>
