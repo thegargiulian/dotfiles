@@ -88,3 +88,6 @@ eval "$(fasd --init auto)"
 function zhead () {
     zcat $1 | head
 }
+
+# featherhead
+alias featherhead="featherhead.py"
