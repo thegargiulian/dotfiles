@@ -65,6 +65,40 @@ if [[ -a $(which nvim) ]]
     alias vim="nvim"
 fi
 
+# new cv
+function cv () {
+    if [[ -a "$1" ]]
+    then
+        if [[ -d "$1" ]]
+        then
+            cd "$1" &&
+            ll
+        elif [[ -f "$1" ]]
+        then
+            cd $(dirname "$1") &&
+            nvim $(basename "$1")
+        else
+            echo "neither a directory nor a file"
+        fi
+    else
+        if [[ $PWD == */$(dirname "$1") ]]
+        then
+            nvim $(basename "$1")
+
+        else
+            if [[ "$1" == */ ]]
+            then
+                mkdir -p "$1" &&
+                cd "$1"
+            else
+                mkdir -p $(dirname "$1") &&
+                cd $(dirname "$1") &&
+                nvim $(basename "$1")
+            fi
+        fi
+    fi
+}
+
 # makes gs git status
 alias gs="git status"
 
@@ -73,6 +107,9 @@ alias gc="git commit -m"
 
 # makes gA git add
 alias gA="git add -A && git status"
+
+# makes gC add and commit
+alias gC="git add -A && git commit -m"
 
 # makes rcr run clean && run
 alias rcr="run clean && run"
@@ -90,4 +127,4 @@ function zhead () {
 }
 
 # featherhead
-alias featherhead="featherhead.py"
+# alias featherhead="featherhead.py"
