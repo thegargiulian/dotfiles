@@ -127,4 +127,6 @@ function zhead () {
 }
 
 # featherhead
-# alias featherhead="featherhead.py"
+alias featherhead="featherhead.py"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
