@@ -1,34 +1,21 @@
-#!/usr/bin/env python3
+#!/opt/anaconda/bin/python3
 # -*- coding: utf-8 -*-
 #
-# Authors:     PB
-# Maintainers: PB
-# Copyright:   2017, HRDAG, GPL v2 or later
-# ============================================
-# dotfiles/scripts/projpath.py
-# inserted with :r !projpath.py %
+# Authors:     GB
+# Maintainers: GB
+# License:     2018, HRDAG, GPL v2 or later
+# ===========================================
+# featherhead.py
 
-import os.path
-import collections
 import sys
+import pandas as pd
 
-startpath = os.path.realpath(sys.argv[1])
-original_startpath = startpath
-rstack = collections.deque()
-subdirs = os.path.dirname(startpath)
-while True:
+feather = pd.read_feather(sys.argv[1])
+try:
+    feather = feather.iloc[:int(sys.argv[2])]
+except IndexError:
+    feather = feather.iloc[:10]
+to_print = feather.to_csv(sep='|', index=False)
+print(to_print)
 
-    lpart, rpart = os.path.dirname(startpath), os.path.basename(startpath)
-    rstack.appendleft(rpart)
-
-    if lpart == '/':
-        raise OSError("no git dir found in {}.".format(original_startpath))
-    if '.git' in subdirs:
-        rpart = os.path.basename(lpart)
-        break
-    subdirs = next(os.walk(lpart))[1]
-    startpath = lpart
-
-print(os.path.join(*rstack) + '/')
-
-# done
+# done.
