@@ -4,7 +4,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
-ZSH_THEME="agnoster"
+ZSH_THEME=""
 DEFAULT_USER=$USER
 
 # Uncomment the following line to use case-sensitive completion.
@@ -40,15 +40,22 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+# using pure prompt from: 
+# https://github.com/sindresorhus/pure
+autoload -U promptinit; promptinit
+prompt pure
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # Getting anaconda
-export PATH="$PATH:$HOME/anaconda3/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+# export PATH="$PATH:$HOME/anaconda3/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="$HOME/anaconda3/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 
 # Getting aer-services added to path for HRDAG
 export PATH="$HOME/bin:$PATH"
+# export PATH="$HOME:$PATH/bin"
 
 # Getting GNU coreutils to be my default
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
