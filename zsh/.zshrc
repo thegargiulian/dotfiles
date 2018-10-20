@@ -42,6 +42,9 @@ source $ZSH/oh-my-zsh.sh
 
 # using pure prompt from: 
 # https://github.com/sindresorhus/pure
+
+export fpath=( "$HOME/dotfiles/zsh/zfunctions" $fpath )
+
 autoload -U promptinit; promptinit
 prompt pure
 
