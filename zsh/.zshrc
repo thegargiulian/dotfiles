@@ -5,6 +5,7 @@
 export ZSH=~/.oh-my-zsh
 
 ZSH_THEME=""
+# ZSH_THEME="agnoster"
 DEFAULT_USER=$USER
 
 # Uncomment the following line to use case-sensitive completion.
@@ -42,6 +43,17 @@ source $ZSH/oh-my-zsh.sh
 
 # using pure prompt from: 
 # https://github.com/sindresorhus/pure
+
+#export PATH="$HOME/anaconda3/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+# export PATH="$HOME/bin:$PATH"
+#export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+#export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+PATH="/usr/local/sbin:$PATH" 
+PATH="/opt/anaconda/bin:$PATH" 
+PATH+=":$HOME/bin"
+export PATH
+export fpath=( "$HOME/dotfiles/zsh/zfunctions" $fpath )
+
 autoload -U promptinit; promptinit
 prompt pure
 
@@ -51,15 +63,15 @@ prompt pure
 
 # Getting anaconda
 # export PATH="$PATH:$HOME/anaconda3/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-export PATH="$HOME/anaconda3/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+# export PATH="$HOME/anaconda3/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 
 # Getting aer-services added to path for HRDAG
-export PATH="$HOME/bin:$PATH"
+# export PATH="$HOME/bin:$PATH"
 # export PATH="$HOME:$PATH/bin"
 
 # Getting GNU coreutils to be my default
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+# export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+# export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
 # Defining aliases
 
