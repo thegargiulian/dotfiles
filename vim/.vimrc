@@ -77,3 +77,7 @@ endif
 " color columns beyond 80 characters
 set colorcolumn=80
 highlight ColorColumn ctermbg=red guibg=red
+
+" English spellcheck
+set spelllang=en
+set spell
