@@ -49,10 +49,12 @@ source $ZSH/oh-my-zsh.sh
 #export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 #export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 PATH="/usr/local/sbin:$PATH" 
-PATH="/opt/anaconda/bin:$PATH" 
+PATH="$HOME/anaconda3/bin:$PATH" 
 PATH+=":$HOME/bin"
 export PATH
-export fpath=( "$HOME/dotfiles/zsh/zfunctions" $fpath )
+
+
+# export fpath=( "$HOME/dotfiles/zsh/zfunctions" $fpath )
 
 autoload -U promptinit; promptinit
 prompt pure
@@ -134,7 +136,7 @@ alias gC="git add -A && git commit -m"
 alias rcr="run clean && run"
 
 # ll
-alias ll="ls -AlFGgh --color='always'"
+alias ll="ls -AlFGgh"
 
 # creates j
 alias j='xdir=$(fasd -dl | fzf --tac) && cd "$xdir"'
@@ -146,6 +148,6 @@ function zhead () {
 }
 
 # featherhead
-alias featherhead="featherhead.py"
+alias featherhead="$HOME/dotfiles/scripts/featherhead.py"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
