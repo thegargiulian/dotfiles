@@ -44,17 +44,16 @@ source $ZSH/oh-my-zsh.sh
 # using pure prompt from: 
 # https://github.com/sindresorhus/pure
 
-#export PATH="$HOME/anaconda3/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
-# export PATH="$HOME/bin:$PATH"
-#export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-#export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 PATH="/usr/local/sbin:$PATH" 
 PATH="$HOME/anaconda3/bin:$PATH" 
 PATH+=":$HOME/bin"
 export PATH
 
-
-# export fpath=( "$HOME/dotfiles/zsh/zfunctions" $fpath )
+case $HOST in
+    (eleanor)
+    export fpath=( "$HOME/dotfiles/zsh/zfunctions" $fpath )
+    ;;
+esac
 
 autoload -U promptinit; promptinit
 prompt pure
