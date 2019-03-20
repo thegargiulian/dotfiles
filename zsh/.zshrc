@@ -20,6 +20,8 @@ export PATH
 case $HOST in
     (eleanor)
     export fpath=( "$HOME/dotfiles/zsh/zfunctions" $fpath )
+    # make LSH software by Beidi et al. work on eleanor
+    export BEIDI_LSH_BLOCKING="/home/mariag/tools/LSHUniqueEntityEstimator/C++Codes/a.out"
     ;;
 esac
 
@@ -87,10 +89,6 @@ alias rcr="run clean && run"
 # ll
 alias ll="ls -AlFGgh"
 
-# creates j
-alias j='xdir=$(fasd -dl | fzf --tac) && cd "$xdir"'
-eval "$(fasd --init auto)"
-
 # zhead
 function zhead () {
     zcat $1 | head
@@ -98,5 +96,12 @@ function zhead () {
 
 # featherhead
 alias featherhead="$HOME/dotfiles/scripts/featherhead.py"
+#
+# creates j
+alias j='xdir=$(fasd -dl | fzf --tac) && cd "$xdir"'
+eval "$(fasd --init auto)"
 
+# initialize j
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# done.
