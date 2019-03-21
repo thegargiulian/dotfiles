@@ -15,7 +15,6 @@ plugins=(git)
 PATH="/usr/local/sbin:$PATH" 
 PATH="$HOME/anaconda3/bin:$PATH" 
 PATH+=":$HOME/bin"
-PATH+="$PATH/bin/zsh"
 export PATH
 
 case $HOST in
