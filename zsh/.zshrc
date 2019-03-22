@@ -7,7 +7,7 @@ ENABLE_CORRECTION="true"
 
 plugins=(git)
 
-# source $ZSH/oh-my-zsh.sh
+source $ZSH/oh-my-zsh.sh
 
 # using pure prompt from: 
 # https://github.com/sindresorhus/pure
