@@ -7,6 +7,7 @@ call plug#begin("~/dotfiles/vim/plugged")
 Plug 'justinmk/vim-sneak'
 Plug 'w0rp/ale'
 Plug 'itchyny/lightline.vim'
+Plug 'junegunn/goyo.vim'
 "Plug 'SirVer/ultisnips'
 "Plug 'roxma/nvim-completion-manager'
 "Plug 'jalvesaq/Nvim-R'
