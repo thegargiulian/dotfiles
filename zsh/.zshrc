@@ -25,6 +25,7 @@ case $HOST in
     ;;
 esac
 
+export fpath=( "$HOME/dotfiles/zsh/zfunctions" $fpath )
 autoload -U promptinit; promptinit
 prompt pure
 
