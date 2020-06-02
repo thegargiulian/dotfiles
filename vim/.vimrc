@@ -11,10 +11,8 @@ Plug 'junegunn/goyo.vim'
 Plug 'kristijanhusak/vim-carbon-now-sh'
 Plug 'kshenoy/vim-signature'
 Plug 'airblade/vim-gitgutter' 
-"Plug 'SirVer/ultisnips'
-"Plug 'roxma/nvim-completion-manager'
-"Plug 'jalvesaq/Nvim-R'
-"Plug 'gaalcaras/ncm-R'
+Plug 'jalvesaq/Nvim-R'
+Plug 'gaalcaras/ncm-R'
 
 call plug#end()
 
@@ -35,13 +33,8 @@ let g:ale_linters = {
 " light-line config
 set laststatus=2
 let g:lightline = {
+\ 'colorscheme': 'material'
       \ }
-
-" ultisnips
-let g:UltiSnipsUsePythonVersion = 3
-let g:UltiSnipsExpandTrigger = '<C-j>'
-let g:UltiSnipsJumpForwardTrigger = '<C-j>'
-let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
 
 " disable arrow keys
 noremap <Up> <NOP>
@@ -54,10 +47,6 @@ inoremap <Esc> <Esc>:w<CR>
 
 " backspace 
 set backspace=indent,eol,start 
-
-" setting up completion
-"let g:cm_smart_enable = 1
-"inoremap <expr> <Tab> pumvisible() ? \"\<C-n>" : \"\<Tab>"
 
 " sets up syntax highlighting
 syntax enable

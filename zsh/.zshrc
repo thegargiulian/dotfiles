@@ -13,15 +13,13 @@ source $ZSH/oh-my-zsh.sh
 # https://github.com/sindresorhus/pure
 
 PATH="/usr/local/sbin:$PATH" 
-PATH="$HOME/anaconda3/bin:$PATH" 
+PATH="$HOME/opt/anaconda3/bin:$PATH" 
 PATH+=":$HOME/bin"
 export PATH
 
 case $HOST in
     (eleanor)
     export fpath=( "$HOME/dotfiles/zsh/zfunctions" $fpath )
-    # make LSH software by Beidi et al. work on eleanor
-    export BEIDI_LSH_BLOCKING="/home/mariag/tools/LSHUniqueEntityEstimator/C++Codes/a.out"
     ;;
 esac
 
