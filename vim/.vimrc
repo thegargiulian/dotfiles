@@ -18,6 +18,9 @@ call plug#end()
 
 " plug config
 
+" R completions remaps
+let R_assign_map = '__'
+
 " sneak config
 let g:sneak#label = 1
 let g:sneak#streak = 1
@@ -71,6 +74,6 @@ endif
 set colorcolumn=80
 highlight ColorColumn ctermbg=red guibg=red
 
-" English spellcheck
+" English spell check
 set spelllang=en
 set spell
