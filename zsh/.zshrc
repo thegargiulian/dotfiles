@@ -62,6 +62,7 @@ function zhead () {
 # featherhead
 alias featherhead="$HOME/dotfiles/scripts/featherhead.py"
 alias parquethead="$HOME/dotfiles/scripts/parquethead.py"
+alias excelhead="$HOME/dotfiles/scripts/excelhead.py"
 
 # creates j
 alias j='xdir=$(fasd -dl | fzf --tac) && cd "$xdir"'
