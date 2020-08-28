@@ -5,14 +5,17 @@ set nocompatible
 call plug#begin("~/dotfiles/vim/plugged")
 
 Plug 'justinmk/vim-sneak'
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 Plug 'itchyny/lightline.vim'
+"Plug 'maximbaz/lightline-ale'
 Plug 'junegunn/goyo.vim'
 Plug 'kristijanhusak/vim-carbon-now-sh'
 Plug 'kshenoy/vim-signature'
 Plug 'airblade/vim-gitgutter' 
 Plug 'jalvesaq/Nvim-R'
 Plug 'gaalcaras/ncm-R'
+Plug 'tpope/vim-commentary'
+Plug 'machakann/vim-highlightedyank'
 
 call plug#end()
 
@@ -30,13 +33,18 @@ nmap S <Plug>SneakLabel_S
 " ale config
 let g:ale_linters = {
 \   'python': ['flake8'],
-\   'R': ['lintr']
+\   'R': ['lintr'],
 \}
 
 " light-line config
 set laststatus=2
 let g:lightline = {
-\ 'colorscheme': 'material'
+      \ 'colorscheme': 'material',
+      \ 'active': {
+      \   'right': [ [ 'lineinfo' ],
+      \              [ 'percent' ],
+      \              [ 'fileformat', 'fileencoding', 'filetype' ] ]
+      \ },
       \ }
 
 " disable arrow keys
@@ -74,6 +82,12 @@ endif
 set colorcolumn=80
 highlight ColorColumn ctermbg=red guibg=red
 
+" highlighted yank duration
+let g:highlightedyank_highlight_duration = 750
+highlight HighlightedyankRegion ctermbg=228 guibg=#ffff87
+
 " English spell check
 set spelllang=en
 set spell
+
+" done.
