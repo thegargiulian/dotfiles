@@ -1,4 +1,4 @@
-" Vi IMproved 
+" Vi IMproved
 set nocompatible
 
 " Plugins
@@ -11,11 +11,12 @@ Plug 'itchyny/lightline.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'kristijanhusak/vim-carbon-now-sh'
 Plug 'kshenoy/vim-signature'
-Plug 'airblade/vim-gitgutter' 
+Plug 'airblade/vim-gitgutter'
 Plug 'jalvesaq/Nvim-R'
 Plug 'gaalcaras/ncm-R'
 Plug 'tpope/vim-commentary'
 Plug 'machakann/vim-highlightedyank'
+Plug 'ntpeters/vim-better-whitespace'
 
 call plug#end()
 
@@ -56,8 +57,8 @@ noremap <Right> <NOP>
 " save on escape
 inoremap <Esc> <Esc>:w<CR>
 
-" backspace 
-set backspace=indent,eol,start 
+" backspace
+set backspace=indent,eol,start
 
 " sets up syntax highlighting
 syntax enable
@@ -83,8 +84,13 @@ set colorcolumn=80
 highlight ColorColumn ctermbg=red guibg=red
 
 " highlighted yank duration
-let g:highlightedyank_highlight_duration = 750
+let g:highlightedyank_highlight_duration=750
 highlight HighlightedyankRegion ctermbg=228 guibg=#ffff87
+
+" strip white space on :w, for vim-better-whitespace
+let g:better_whitespace_enabled=1
+let g:strip_whitespace_on_save=1
+let g:strip_whitespace_confirm=0
 
 " English spell check
 set spelllang=en
