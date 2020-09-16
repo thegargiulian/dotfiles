@@ -12,6 +12,8 @@ Plug 'junegunn/goyo.vim'
 Plug 'kristijanhusak/vim-carbon-now-sh'
 Plug 'kshenoy/vim-signature'
 Plug 'airblade/vim-gitgutter'
+Plug 'ncm2/ncm2'
+Plug 'roxma/nvim-yarp'
 Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
 Plug 'gaalcaras/ncm-R'
 Plug 'tpope/vim-commentary'
