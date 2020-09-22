@@ -12,6 +12,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'kristijanhusak/vim-carbon-now-sh'
 Plug 'kshenoy/vim-signature'
 Plug 'airblade/vim-gitgutter'
+Plug 'lifepillar/vim-mucomplete'
 Plug 'ncm2/ncm2'
 Plug 'roxma/nvim-yarp'
 Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
@@ -32,6 +33,13 @@ let g:sneak#label = 1
 let g:sneak#streak = 1
 nmap s <Plug>SneakLabel_s
 nmap S <Plug>SneakLabel_S
+
+" MUcomplete
+set completeopt+=menuone,noselect
+set shortmess+=c
+set belloff+=ctrlg
+set complete+=i
+set complete+=kspell
 
 " ale config
 let g:ale_linters = {
