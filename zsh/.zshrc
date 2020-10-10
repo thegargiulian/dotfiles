@@ -9,11 +9,11 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-# using pure prompt from: 
+# using pure prompt from:
 # https://github.com/sindresorhus/pure
 
-PATH="/usr/local/sbin:$PATH" 
-PATH="$HOME/opt/anaconda3/bin:$PATH" 
+PATH="/usr/local/sbin:$PATH"
+PATH="$HOME/opt/anaconda3/bin:$PATH"
 PATH+=":$HOME/bin"
 export PATH
 
@@ -35,6 +35,9 @@ if [[ -a $(which nvim) ]]
     then
     alias vim="nvim"
 fi
+
+# making sure colors show correctly
+export TERM="xterm-256color"
 
 # makes gs git status
 alias gs="git status"

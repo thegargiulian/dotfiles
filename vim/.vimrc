@@ -20,10 +20,18 @@ Plug 'gaalcaras/ncm-R'
 Plug 'tpope/vim-commentary'
 Plug 'machakann/vim-highlightedyank'
 Plug 'ntpeters/vim-better-whitespace'
+Plug 'Rigellute/rigel'
 
 call plug#end()
 
 " plug config
+
+" enable 24bit true color
+set termguicolors
+
+" enable rigel theme
+syntax enable
+colorscheme rigel
 
 " R completions remaps
 let R_assign_map = '__'
@@ -50,7 +58,7 @@ let g:ale_linters = {
 " light-line config
 set laststatus=2
 let g:lightline = {
-      \ 'colorscheme': 'material',
+      \ 'colorscheme': 'rigel',
       \ 'active': {
       \   'right': [ [ 'lineinfo' ],
       \              [ 'percent' ],
