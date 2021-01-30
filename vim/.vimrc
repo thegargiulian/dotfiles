@@ -21,6 +21,7 @@ Plug 'tpope/vim-commentary'
 Plug 'machakann/vim-highlightedyank'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'Rigellute/rigel'
+Plug 'eigenfoo/stan-vim'
 
 call plug#end()
 
