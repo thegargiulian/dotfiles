@@ -74,4 +74,7 @@ eval "$(fasd --init auto)"
 # initialize j
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# locales
+export LC_ALL='en_US.UTF-8'
+
 # done.
