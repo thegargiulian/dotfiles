@@ -1,6 +1,2 @@
-# ignore anything in plugged
 plugged/
-
-# don't copy symlinks
-zfunctions/async/
-zfunctions/prompt_pure_setup/
+zfunctions/
