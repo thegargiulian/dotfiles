@@ -1,13 +1,13 @@
-export ZSH=~/.oh-my-zsh
+# export ZSH=~/.oh-my-zsh
 
-ZSH_THEME=""
-DEFAULT_USER=$USER
+# ZSH_THEME=""
+# DEFAULT_USER=$USER
 
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 plugins=(git)
 
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
 
 # using pure prompt from:
 # https://github.com/sindresorhus/pure
