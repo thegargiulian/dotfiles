@@ -7,7 +7,6 @@ call plug#begin("~/dotfiles/vim/plugged")
 Plug 'justinmk/vim-sneak'
 Plug 'dense-analysis/ale'
 Plug 'itchyny/lightline.vim'
-"Plug 'maximbaz/lightline-ale'
 Plug 'junegunn/goyo.vim'
 Plug 'kristijanhusak/vim-carbon-now-sh'
 Plug 'kshenoy/vim-signature'
@@ -22,6 +21,7 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'Rigellute/rigel'
 Plug 'eigenfoo/stan-vim'
+Plug 'jalvesaq/zotcite'
 
 call plug#end()
 

@@ -1,13 +1,4 @@
-# export ZSH=~/.oh-my-zsh
-
-# ZSH_THEME=""
-# DEFAULT_USER=$USER
-
-# ENABLE_CORRECTION="true"
-
 plugins=(git)
-
-# source $ZSH/oh-my-zsh.sh
 
 # using pure prompt from:
 # https://github.com/sindresorhus/pure
@@ -26,9 +17,6 @@ esac
 export fpath=( "$HOME/dotfiles/zsh/zfunctions" $fpath )
 autoload -U promptinit; promptinit
 prompt pure
-
-# use vim commands on the command line
-set -o vi
 
 # alias vim
 if [[ -a $(which nvim) ]]
@@ -74,6 +62,12 @@ eval "$(fasd --init auto)"
 # initialize j
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# zsh vi mode on command line
+source $HOME/.zsh-vi-mode/zsh-vi-mode.plugin.zsh
+
+# use vim commands on the command line
+# set -o vi
+
 # locales
 export LC_ALL='en_US.UTF-8'
 
@@ -81,16 +75,17 @@ export LC_ALL='en_US.UTF-8'
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/mariagargiulo/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/mariagargiulo/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/mariagargiulo/opt/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/mariagargiulo/opt/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
+# __conda_setup="$('/Users/mariagargiulo/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+# if [ $? -eq 0 ]; then
+#     eval "$__conda_setup"
+# else
+#     if [ -f "/Users/mariagargiulo/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+#         . "/Users/mariagargiulo/opt/anaconda3/etc/profile.d/conda.sh"
+#     else
+#         export PATH="/Users/mariagargiulo/opt/anaconda3/bin:$PATH"
+#     fi
+# fi
+# unset __conda_setup
 # <<< conda initialize <<<
 
+export PATH="/usr/local/opt/libxml2/bin:$PATH"
