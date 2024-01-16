@@ -6,10 +6,11 @@ plugins=(git)
 PATH="/usr/local/sbin:$PATH"
 PATH="$HOME/opt/anaconda3/bin:$PATH"
 PATH+=":$HOME/bin"
-export PATH
+export PATH="/usr/local/opt/libxml2/bin:$PATH"
+# export PATH
 
 case $HOST in
-    (eleanor)
+    (scott)
     export fpath=( "$HOME/dotfiles/zsh/zfunctions" $fpath )
     ;;
 esac
@@ -65,27 +66,7 @@ eval "$(fasd --init auto)"
 # zsh vi mode on command line
 source $HOME/.zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
-# use vim commands on the command line
-# set -o vi
-
 # locales
 export LC_ALL='en_US.UTF-8'
 
 # done.
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-# __conda_setup="$('/Users/mariagargiulo/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-# if [ $? -eq 0 ]; then
-#     eval "$__conda_setup"
-# else
-#     if [ -f "/Users/mariagargiulo/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-#         . "/Users/mariagargiulo/opt/anaconda3/etc/profile.d/conda.sh"
-#     else
-#         export PATH="/Users/mariagargiulo/opt/anaconda3/bin:$PATH"
-#     fi
-# fi
-# unset __conda_setup
-# <<< conda initialize <<<
-
-export PATH="/usr/local/opt/libxml2/bin:$PATH"
