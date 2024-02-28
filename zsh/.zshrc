@@ -7,7 +7,6 @@ PATH="/usr/local/sbin:$PATH"
 PATH="$HOME/opt/anaconda3/bin:$PATH"
 PATH+=":$HOME/bin"
 export PATH="/usr/local/opt/libxml2/bin:$PATH"
-# export PATH
 
 case $HOST in
     (scott)
@@ -46,22 +45,17 @@ alias rcr="run clean && run"
 # ll
 alias ll="ls -AlFGgh"
 
-# zhead
-function zhead () {
-    zcat $1 | head
-}
-
 # featherhead
 alias featherhead="$HOME/dotfiles/scripts/featherhead.py"
 alias parquethead="$HOME/dotfiles/scripts/parquethead.py"
 alias excelhead="$HOME/dotfiles/scripts/excelhead.py"
 
 # creates j
-alias j='xdir=$(fasd -dl | fzf --tac) && cd "$xdir"'
-eval "$(fasd --init auto)"
-
-# initialize j
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+if [[ -a $(which zoxide) ]]
+then
+    eval "$(zoxide init zsh)"
+fi
+alias j=zi
 
 # zsh vi mode on command line
 source $HOME/.zsh-vi-mode/zsh-vi-mode.plugin.zsh
